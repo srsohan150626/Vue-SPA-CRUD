@@ -4,10 +4,6 @@ import axios from 'axios';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
-import ViewUI from 'view-design';
-import 'view-design/dist/styles/iview.css';
-Vue.use(ViewUI);
-
 //sweet alert
 import Swal from 'sweetalert2'
 Vue.prototype.$Swal= Swal
