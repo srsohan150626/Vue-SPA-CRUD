@@ -67,7 +67,7 @@ export default {
     },
     methods:{
         login(){
-            this.$axios.post('http://192.168.0.104:8088/api/auth/login/',this.form)
+            this.$http.post('api/auth/login/',this.form)
             .then(res => {
              this.$User.responseAfterLogin(res)
              this.$Toast.fire({

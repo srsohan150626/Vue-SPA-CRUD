@@ -91,7 +91,7 @@ export default {
     },
     methods:{
       allProducts(){
-        this.$axios.get('http://192.168.0.104:8088/api/products')
+        this.$http.get('api/products')
         .then(({data})  => (this.products = data))
       },
       deleteProduct(id){
@@ -105,7 +105,7 @@ export default {
         confirmButtonText: 'Yes, delete it!'
       }).then((result) => {
         if(result.value) {
-            this.$axios.delete('http://192.168.0.104:8088/api/products/'+id)
+            this.$http.delete('api/products/'+id)
             .then(()=>{
                 this.products = this.products.filter(product =>{
                     return product.id !=id

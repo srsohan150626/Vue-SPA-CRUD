@@ -89,7 +89,7 @@ created(){
       this.$router.push({name : '/'})
     }
     let id= this.$route.params.id
-    this.$axios.get('http://192.168.0.104:8088/api/products/'+id)
+    this.$http.get('api/products/'+id)
     .then(({data}) => (this.form = data))
     .catch(console.log('error'))
   },
@@ -124,7 +124,7 @@ created(){
         },
         productUpdate(){
             let id= this.$route.params.id
-            this.$axios.patch('http://192.168.0.104:8088/api/products/'+id,this.form)
+            this.$http.patch('api/products/'+id,this.form)
             .then(() => {
                 this.$router.push({ name: 'products'})
                this.$Toast.fire({

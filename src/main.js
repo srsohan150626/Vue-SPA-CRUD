@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router';
-import axios from 'axios';
+
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,7 +12,13 @@ Vue.prototype.$Swal= Swal
 import User from './Helpers/User'
 Vue.prototype.$User = User
 
+import http from './common'
+Vue.prototype.$http = http
+
 Vue.use(VueRouter);
+
+//import axios
+import axios from 'axios';
 Vue.prototype.$axios = axios
 
 const Toast = Swal.mixin({

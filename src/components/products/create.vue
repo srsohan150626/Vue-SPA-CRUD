@@ -116,7 +116,7 @@ created(){
             }
         },
         productInsert(){
-            this.$axios.post('http://192.168.0.104:8088/api/products/',this.form)
+            this.$http.post('api/products/',this.form)
             .then(() => {
                 this.$router.push({ name: 'products'})
                 this.$Toast.fire({
