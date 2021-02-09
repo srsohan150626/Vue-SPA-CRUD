@@ -1,4 +1,4 @@
-# vuecrud
+# vue-spa-crud
 
 ## Project setup
 ```
